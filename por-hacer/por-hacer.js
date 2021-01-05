@@ -37,10 +37,7 @@ let crear = (descripcion) => {
 const getListado = (completado) => {
     console.log(completado);
     leerDB();
-    let bool = Boolean(completado);
-    console.log('bool', completado);
-    let index = porHacer.filter(tarea => tarea.completado === new Boolean(completado));
-    console.log(index);
+    let index = porHacer.filter(tarea => tarea.completado.toString() === completado);
     return index;
 }
 
